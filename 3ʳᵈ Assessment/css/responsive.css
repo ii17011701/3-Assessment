@@ -74,6 +74,22 @@
     }
     
     @media(max-width: 991px) {
+         .header-top {
+            background-color: #F12F37;
+            color: white;
+            height: 25px;
+            display: flex;
+            justify-content: space-evenly;
+            /* align-items: center; */
+            gap: 10rem;
+            font-size: 15px;
+        }
+        .header-top-right {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            cursor: pointer;
+        }
         .our-histroy {
             display: flex;
             flex-direction: column;
