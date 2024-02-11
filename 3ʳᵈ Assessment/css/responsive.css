@@ -652,6 +652,7 @@
     }
     
     @media(max-width: 425px) {
+        
            
         .navbar {
             display: flex;
@@ -729,6 +730,32 @@
             font-size: 14px;
         }
         
+    }
+
+    @media(max-width: 390px) {
+        .ourtxt p{
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 17.5px;
+        }
+        .ourtxt h5{
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1.5;
+        }
+        
+        .ourimg1, .ourimg2, .ourimg3 {
+            height: 7rem; 
+            width: 8.3rem; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* margin-top: 1rem; */
+          }
     }
     
     @media(max-width: 375px) {
