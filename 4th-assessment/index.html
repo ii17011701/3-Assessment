@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript-Assessment</title>
+</head>
+<body>
+    <h3>1.	Write a script which displays all the numbers between 892 and 1132 that are 
+        Divisible by 4.
+        </h3>
+<code><pre>
+    <u>code</u>
+    &lt;script &gt;
+        for(i=892;i<=1132;i++){
+            let $i = i / 4;
+            document.write(i +"\n");
+            document.write("Divisible by 4 = "+$i+"<br>");
+        }
+        &lt;/script&gt;
+</pre></code>
+
+    <script>
+        for(i=892;i<=1132;i++){
+            let $i = i / 4;
+            document.write(i +"\n");
+            document.write("Divisible by 4 = "+$i+"<br>");
+        }
+        </script>
+
+<hr><hr>
+            <h3>2.	Write a script that displays output given below using loop
+                1-2-3
+                2-3-4
+                3-4-5
+                4-5-6
+                5-6-7
+                6-7-8
+                7-8-9
+                8-9-10
+                9-10-11
+                </h3>
+    <code><pre>
+    <u>code</u>
+&lt;script&gt;
+                        
+for (let i = 1; i <= 9; i++) {
+ document.write(i+"-")
+            
+  document.write(i+1 +"-",i+2+"<br>");
+                       }
+&lt; /script &gt;
+            
+    </pre></code>
+                <script>
+            for (let i = 1; i <= 9; i++) {
+         document.write(i+"-")
+
+       document.write(i+1 +"-",i+2+"<br>");
+}
+</script>
+<hr><hr>
+<h3>3.	Write a JavaScript to find the second highest marks from a student marks card</h3>
+    <code><pre>
+    <u>code</u>
+        &lt;script&gt;
+            function findSecondHighestMarks(marks) {
+      if (!Array.isArray(marks) || marks.length < 2) {
+        return "Invalid input: Please provide an array of marks with at least two elements.";
+      }
+    
+      marks.sort((a, b) => b - a);
+    
+      const secondHighest = marks.filter((mark, index) => index !== 0 && mark !== marks[0])[0];
+    
+      return secondHighest !== undefined ? secondHighest : "No unique second highest";
+    }
+    
+    
+    const marks = [85, 90, 75, 90, 80];
+    const secondHighest = findSecondHighestMarks(marks);
+    
+    console.log("Second highest marks:", secondHighest);
+    document.write("Second highest marks:", secondHighest);
+        &lt;script&gt;>
+    </pre></code>
+
+
+
+
+    <script>
+        function findSecondHighestMarks(marks) {
+  if (!Array.isArray(marks) || marks.length < 2) {
+    return "Invalid input: Please provide an array of marks with at least two elements.";
+  }
+
+  marks.sort((a, b) => b - a);
+
+  const secondHighest = marks.filter((mark, index) => index !== 0 && mark !== marks[0])[0];
+
+  return secondHighest !== undefined ? secondHighest : "No unique second highest";
+}
+
+
+const marks = [85, 90, 75, 90, 80];
+const secondHighest = findSecondHighestMarks(marks);
+
+console.log("Second highest marks:", secondHighest);
+document.write("Second highest marks:", secondHighest);
+    </script>
+
+<hr><hr>
+
+<h3>4.	How to declare variables in different ways in JavaScript? Explain the difference between them.</h3>
+    <p>There are 3 types of variable.</p>
+     <ul>
+        <li>var</li>
+        <li>let</li>
+        <li>const</li>
+     </ul>
+         <p>we using these 3type variable to declare the values.</p>
+         <p>for example <span>var x;</span> var is a veriable and x is a identifier and for assigning value to x we use equal to (=) to store the values.</p>
+         <p>we can declare variable name using underscore(_), dollor($), and letter at the starting time and it is a case sensitive.</p>
+         <br>
+         <p><span>var</span> is used to support old version browser and this variable is used in global scope</p>
+         <p><span>let</span> variable is used to declear a values and it is a block scope variable</p>
+         <p><span>const</span>once you assgin the value that value will be fixed.</p>
+       <hr><hr>
+
+       
+
+
+
+       <h3>5.	JavaScript Program to Find the Largest Among Three Numbers</h3>
+<code><pre>
+    <u>code</u>
+    &lt;script&gt;
+        function findLargest(){
+  if (num1 >= num2 && num1 >= num3) {
+    return num1;
+  } else if (num2 >= num1 && num2 >= num3) {
+    return num2;
+  } else {
+    return num3;
+}}
+
+
+const num1 = 10;
+const num2 = 20;
+const num3 = 5;
+
+const largest = findLargest(num1, num2, num3);
+
+console.log("The largest number is:", largest);
+     document.write("The largest number is:", largest);
+       &lt;/script&gt;
+</pre></code>
+
+
+
+       <script>
+        function findLargest(){
+  if (num1 >= num2 && num1 >= num3) {
+    return num1;
+  } else if (num2 >= num1 && num2 >= num3) {
+    return num2;
+  } else {
+    return num3;
+}}
+
+
+const num1 = 10;
+const num2 = 20;
+const num3 = 5;
+
+const largest = findLargest(num1, num2, num3);
+
+console.log("The largest number is:", largest);
+     document.write("The largest number is:", largest);
+       </script>
+
+
+
+<hr><hr>
+<h3>6.	Write a JavaScript to find sign of the given number.</h3>
+<code><pre>
+    <u>code</u>
+    &lt;script&gt;
+        function findSign(number) {
+          return number > 0 ? "positive" : (number < 0 ? "negative" : "zero");
+        }
+        
+        
+        const num$1 = 10;
+        const num$2 = -5;
+        const num$3 = 0;
+        
+        document.write("Sign of ", num$1, " : ", findSign(num$1)+"<br>");
+        document.write("Sign of ", num$2, " : ", findSign(num$2)+"<br>");
+        document.write("Sign of ", num$3, " : ", findSign(num$3)+"<br>");
+        &lt;/script&gt;
+</pre></code>
+
+<script>
+function findSign(number) {
+  return number > 0 ? "positive" : (number < 0 ? "negative" : "zero");
+}
+
+
+const num$1 = 10;
+const num$2 = -5;
+const num$3 = 0;
+
+document.write("Sign of ", num$1, " : ", findSign(num$1)+"<br>");
+document.write("Sign of ", num$2, " : ", findSign(num$2)+"<br>");
+document.write("Sign of ", num$3, " : ", findSign(num$3)+"<br>");
+</script>
+
+
+<hr> <hr>
+
+<h3>7.	Write a JavaScript program which iterates the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".</h3>
+
+<code><pre>
+    <u>code</u>
+    &lt;script&gt;
+        for (let i = 1; i <= 100; i++) {
+if (i % 3 === 0 && i % 5 === 0) {
+document.write("FizzBuzz");
+} else if (i % 3 === 0) { 
+document.write("Fizz");
+} else if (i % 5 === 0) { 
+document.write("Buzz");
+} else {
+document.write(i+"<br>"); 
+}
+}
+&lt;/script&gt;
+</pre></code>
+
+
+                 <script>
+                     for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    document.write("FizzBuzz");
+  } else if (i % 3 === 0) { 
+    document.write("Fizz");
+  } else if (i % 5 === 0) { 
+    document.write("Buzz");
+  } else {
+    document.write(i+"<br>"); 
+  }
+}
+</script>
+<hr><hr>
+<h3>8.	Write a JavaScript for loop that iterates from 0 to 15. For each iteration, it checks if the current number is odd or even, and displays a message on the screen.</h3>
+<code><pre>
+    <u>code</u>
+        &lt;script&gt;
+            for(i=0;i<=15;i++){
+                // document.write(i+"<br>");
+                // document.write(i % 2);
+
+
+                document.write(i+"-")
+
+                // document.write(i % 2 +"-"+"<br>");
+                document.write( i % 2 ? "odd" : "even"+"<br>");
+            }
+         &lt;/script&gt;
+    
+</pre></code>
+                 <script>
+                    for(i=0;i<=15;i++){
+                        // document.write(i+"<br>");
+                        // document.write(i % 2);
+
+
+                        document.write(i+"-")
+
+                        // document.write(i % 2 +"-"+"<br>");
+                        document.write( i % 2 ? "odd" : "even"+"<br>");
+                    }
+                 </script>
+</body>
+</html>
